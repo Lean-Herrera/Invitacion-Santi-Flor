@@ -14,7 +14,7 @@ header .encabezado {
   display: grid;
   justify-content: center;
   background-attachment: fixed;
-  background-color: rgba(254, 205, 165, 0.492);
+  background-color: #aedbff;
   font-family: Allura;
 }
 header .encabezado .capa {
@@ -169,43 +169,187 @@ main .ceremonia .cinta {
   width: 70vw;
 }
 main .ceremonia .cinta .cola-cinta {
+  display: none;
   width: 100%;
   height: 100%;
-  fill: #deeefa;
+  fill: #004cda;
 }
 main .ceremonia .cinta h2 {
+  color: #deeefa;
   padding-inline: 2rem;
   font-size: 40px;
   font-family: "Playfair Display", serif;
-  background-color: #deeefa;
+  background-color: rgb(73, 146, 230);
   align-self: center;
   text-align: center;
 }
-main .ceremonia .lugar {
+main .ceremonia section {
   width: 100%;
-  gap: 1rem;
+  gap: 2rem;
   margin-block: 2rem;
   justify-content: center;
   display: grid;
 }
-main .ceremonia .lugar h2 {
+main .ceremonia section h2 {
+  font-size: 2rem;
   font-family: "Playfair Display", serif;
   justify-self: center;
+  color: #092f76;
 }
-main .ceremonia .lugar h3 {
+main .ceremonia section h3 {
+  color: #092f76;
+  font-size: 1.4rem;
   justify-self: center;
 }
-main .ceremonia .lugar .mapa button {
-  border: 1px solid;
-  width: 200px;
+main .ceremonia section .mapa {
+  justify-self: center;
+}
+main .ceremonia section .mapa button {
+  width: 80vw;
+  border: 0;
   height: 40px;
   border-radius: 20px;
+  background-color: #004cda;
 }
-main .ceremonia .lugar .mapa button a {
+main .ceremonia section .mapa button a {
+  justify-content: center;
+  display: flex;
+  width: 100%;
   font-size: 20px;
-  color: #092f76;
+  color: #aedbff;
   font-family: "Playfair Display", serif;
   text-decoration: none;
+}
+main .fiesta {
+  display: grid;
+  margin-block: 2rem;
+  gap: 2rem;
+}
+main .fiesta .titulo-fiesta {
+  justify-self: center;
+  color: #deeefa;
+  padding-inline: 2rem;
+  font-size: 40px;
+  font-family: "Playfair Display", serif;
+  background-color: rgb(73, 146, 230);
+  align-self: center;
+  text-align: center;
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+main .fiesta .dresscode {
+  display: grid;
+  justify-self: center;
+  background-color: #deeefa;
+  padding: 0 40px;
+  border-radius: 20px;
+  min-height: 300px;
+  width: 80%;
+}
+main .fiesta .dresscode h2 {
+  color: #092f76;
+  justify-self: center;
+  align-self: center;
+  font-size: 2rem;
+}
+main .fiesta .dresscode p {
+  justify-self: center;
+  text-align: center;
+  font-size: 1.3rem;
+}
+main .fiesta .musica {
+  display: grid;
+  justify-self: center;
+  background-color: #deeefa;
+  padding: 0 40px;
+  border-radius: 20px;
+  min-height: 300px;
+  width: 80%;
+}
+main .fiesta .musica h2 {
+  color: #092f76;
+  justify-self: center;
+  align-self: center;
+  font-size: 2rem;
+}
+main .fiesta .musica p {
+  justify-self: center;
+  text-align: center;
+  font-size: 1.3rem;
+}
+main .fiesta .musica button {
+  justify-self: center;
+  width: 90%;
+  border: 0;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #004cda;
+}
+main .fiesta .musica button a {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  font-size: 20px;
+  color: #aedbff;
+  font-family: "Playfair Display", serif;
+  text-decoration: none;
+}
+main .fiesta .comida {
+  display: grid;
+  justify-self: center;
+  background-color: #deeefa;
+  padding: 0 40px;
+  border-radius: 20px;
+  min-height: 400px;
+  width: 80%;
+}
+main .fiesta .comida h2 {
+  color: #092f76;
+  justify-self: center;
+  align-self: center;
+  font-size: 2rem;
+}
+main .fiesta .comida p {
+  justify-self: center;
+  text-align: center;
+  font-size: 1.3rem;
+}
+main .fiesta .comida button {
+  justify-self: center;
+  width: 90%;
+  border: 0;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #004cda;
+}
+main .fiesta .comida button a {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  font-size: 20px;
+  color: #aedbff;
+  font-family: "Playfair Display", serif;
+  text-decoration: none;
+}
+main .fiesta .regalo {
+  display: grid;
+  justify-self: center;
+  background-color: #deeefa;
+  padding: 0 40px;
+  border-radius: 20px;
+  min-height: 300px;
+  width: 80%;
+}
+main .fiesta .regalo h2 {
+  color: #092f76;
+  justify-self: center;
+  align-self: center;
+  font-size: 2rem;
+}
+main .fiesta .regalo p {
+  justify-self: center;
+  text-align: center;
+  font-size: 1.3rem;
 }
 footer {
   background-color: rgba(254, 205, 165, 0.492);
