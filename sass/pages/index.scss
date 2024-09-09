@@ -1,0 +1,281 @@
+header {
+    .encabezado {
+
+        min-height: 50vh;
+        position: relative;
+        //background-image: url("https://scontent.faep9-1.fna.fbcdn.net/v/t39.30808-6/294369655_566091618463016_94671775935919982_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFIbdulDj6d6fwewjd1e3TmkIZ0TknvNHKQhnROSe80cqYDP6Un38U9HZZz4kgXOdsw-QGuaBeJFfjWcVQxApMW&_nc_ohc=RQ_CoxypqzUQ7kNvgF3LtGc&_nc_ht=scontent.faep9-1.fna&oh=00_AYAK19qn_slsnzt0eOhMgokn61NQ1eJPVWr3YY37Uz7hXg&oe=66DE7328");
+        background-size: contain;
+        background-image: url("../../imagenes/novios.jpg");
+        background-repeat: no-repeat;
+        display: grid;
+        justify-content: center;
+        background-attachment: fixed;
+        background-color: rgba(254, 205, 165, 0.492);
+
+        font-family: Allura;
+
+
+        .capa {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.507);
+            mix-blend-mode: overlay;
+
+
+        }
+
+        .curva {
+            display: none;
+            width: 100vw;
+            align-self: end;
+        }
+
+
+        .wave-container {
+            top: 80%;
+            width: 100vw;
+            position: relative;
+            overflow: auto;
+            background-color: transparent;
+            /* Color de fondo del div */
+            height: 100px;
+            /* Ajusta según el tamaño que necesites */
+        }
+
+        .wave-container::before {
+            content: '';
+            width: 100px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            /* Ajusta la altura de la ola */
+            background: url('../../imagenes/wave.svg');
+            /* Archivo SVG externo */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+    }
+
+}
+
+main {
+    //background-color: $color-primario;
+    //background-color: $color-primario;
+    background-color: $color-primario;
+    display: grid;
+    justify-content: center;
+
+
+
+    .fecha-y-nombres {
+
+        margin-block: 2rem;
+        display: grid;
+
+        h2 {
+            justify-content: center;
+            font-family: $fuente-principal;
+            justify-self: center;
+            padding: 5px 30px 10px;
+            align-self: top;
+            color: $color-secundario;
+            border: 2px solid;
+            margin: 0px 0px 35px;
+            width: fit-content;
+            border-image-slice: 1;
+            border-image-source: linear-gradient(to right, $color-primario, $color-secundario, $color-primario);
+            border-width: 1px;
+        }
+
+        h1 {
+
+            font-family: $fuente-principal;
+            justify-self: center;
+            align-self: center;
+            font-size: 70px;
+            line-height: 55px;
+            color: $color-3;
+            text-transform: uppercase;
+            font-weight: 400;
+            z-index: 2;
+
+            span {
+                display: none;
+                justify-content: center;
+                font-size: 250px;
+                z-index: -1;
+                color: red;
+
+            }
+        }
+
+    }
+
+
+
+
+
+    .versiculo {
+
+        display: grid;
+
+        p {
+            font-family: sevillana;
+            font-size: 1.3rem;
+            margin: 1rem;
+            width: 80vw;
+            justify-self: center;
+
+        }
+    }
+
+    .flores {
+        justify-self: center;
+        display: grid;
+        position: relative;
+
+        img {
+            width: 100%;
+            z-index: 1;
+        }
+
+        p {
+            justify-self: center;
+            justify-content: center;
+            position: absolute;
+            position: absolute;
+            /* Posicionar elementos de forma absoluta */
+            top: 50%;
+            /* Centrando verticalmente */
+            left: 50%;
+            /* Centrando horizontalmente */
+            transform: translate(-35%, -80%);
+            /* Alinear al centro */
+            font-size: 30px;
+            line-height: 35px;
+            color: $color-secundario ;
+            font-family: $fuente-principal;
+
+
+
+        }
+
+        .corazon {
+
+            position: absolute;
+            top: 55%;
+            left: 43%;
+            width: 50px;
+            /* Tamaño del corazón */
+            height: 100px;
+            /* Tamaño del corazón */
+            fill: $color-3;
+            /* Color del corazón */
+        }
+
+        .circulo {
+            height: 270px;
+            width: 270px;
+            background-color: $color-4;
+            // background-color: #addbff;
+            position: absolute;
+            top: 50%;
+            /* Centrando verticalmente */
+            left: 50%;
+            /* Centrando horizontalmente */
+            transform: translate(-50%, -50%);
+            /* Alinear al centro */
+            border-radius: 100%;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    .ceremonia {
+        justify-content: center;
+        display: grid;
+
+        .cinta {
+            justify-content: center;
+            justify-self: center;
+            display: flex;
+            width: 70vw;
+
+            .cola-cinta {
+                width: 100%;
+                height: 100%;
+                fill: $color-4;
+
+
+
+
+            }
+
+            h2 {
+                padding-inline: 2rem;
+                font-size: 40px;
+                font-family: $fuente-principal;
+                background-color: $color-4;
+                align-self: center;
+                text-align: center;
+            }
+
+        }
+
+        .lugar {
+            width: 100%;
+            gap: 1rem;
+            margin-block: 2rem;
+            justify-content: center;
+            display: grid;
+
+            h2 {
+                font-family: $fuente-principal;
+                justify-self: center;
+            }
+
+            h3 {
+                justify-self: center;
+            }
+
+            .mapa {
+
+                button {
+                     border: 1px solid;
+                    width: 200px;
+                    height: 40px;
+                    border-radius: 20px;
+
+                    a {
+                       
+                        font-size: 20px;
+                        color: $color-3;
+                        font-family: $fuente-principal;
+                        text-decoration: none;
+                    }
+
+                }
+
+
+            }
+
+        }
+
+
+    }
+
+    .fiesta {}
+
+    .asistencia {}
+
+}
+
+footer {
+    background-color: rgba(254, 205, 165, 0.492);
+}
