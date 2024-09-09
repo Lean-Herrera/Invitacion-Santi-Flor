@@ -9,7 +9,7 @@ header .encabezado {
   min-height: 50vh;
   position: relative;
   background-size: contain;
-  background-image: url("../../imagenes/novios.jpg");
+  background-image: url("../imagenes/novios.jpg");
   background-repeat: no-repeat;
   display: grid;
   justify-content: center;
