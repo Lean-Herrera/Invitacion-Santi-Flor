@@ -50,7 +50,7 @@ header .encabezado .wave-container::before {
   width: 100%;
   height: 100px;
   /* Ajusta la altura de la ola */
-  background: url("../../imagenes/wave.svg");
+  background: url("../imagenes/wave.svg");
   /* Archivo SVG externo */
   background-repeat: no-repeat;
   background-size: cover;
