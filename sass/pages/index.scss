@@ -2,7 +2,8 @@ header {
     .encabezado {
 
         min-height: 50vh;
-        position: relative;
+        position: static;
+        //position: relative;
         //background-image: url("https://www.facebook.com/photo/?fbid=3199221956880925&set=a.258308264305657");
         background-size: contain;
         background-image: url("../imagenes/novios.jpg");
@@ -11,7 +12,6 @@ header {
         justify-content: center;
         background-attachment: fixed;
         background-color: $color-primario;
-
         font-family: Allura;
 
 
@@ -87,12 +87,33 @@ main {
             align-self: top;
             color: $color-secundario;
             border: 2px solid;
-            margin: 0px 0px 35px;
+            margin: 0px 0px 50px;
             width: fit-content;
             border-image-slice: 1;
             border-image-source: linear-gradient(to right, $color-primario, $color-secundario, $color-primario);
             border-width: 1px;
         }
+
+        // svg {
+        //     position: absolute;
+        //     bottom: 7%;
+        //     left: 30%;
+        //     max-width: fit-content;
+        //     height: fit-content;
+        //     display: grid;
+
+        //     .ampersand {
+
+        //         align-self: center;
+        //         justify-self: center;
+        //         position: relative;
+        //         font-family: 'Poppins';
+        //         font-size: 240px;
+        //         fill: url(#grad1);
+        //         filter: url(#shadow);
+        //     }
+        //}
+
 
         h1 {
 
@@ -142,7 +163,7 @@ main {
         position: relative;
 
         img {
-            width: 100%;
+            width: 100vw;
             z-index: 1;
         }
 
@@ -158,7 +179,7 @@ main {
             /* Centrando horizontalmente */
             transform: translate(-35%, -80%);
             /* Alinear al centro */
-            font-size: 30px;
+            font-size: 7vw;
             line-height: 35px;
             color: $color-secundario ;
             font-family: $fuente-principal;
@@ -170,9 +191,9 @@ main {
         .corazon {
 
             position: absolute;
-            top: 55%;
+            top: 54%;
             left: 43%;
-            width: 50px;
+            width: 16vw;
             /* Tamaño del corazón */
             height: 100px;
             /* Tamaño del corazón */
@@ -181,8 +202,8 @@ main {
         }
 
         .circulo {
-            height: 270px;
-            width: 270px;
+            height: 65vw;
+            width: 65vw;
             background-color: $color-4;
             // background-color: #addbff;
             position: absolute;
@@ -219,6 +240,7 @@ main {
             }
 
             h2 {
+                border-radius: 10px;
                 color: $color-4;
                 padding-inline: 2rem;
                 font-size: 40px;
@@ -245,6 +267,7 @@ main {
             }
 
             h3 {
+                text-align: center;
                 color: $color-3;
                 font-size: 1.4rem;
                 justify-self: center;
@@ -287,10 +310,11 @@ main {
     .fiesta {
         display: grid;
         margin-block: 2rem;
-        gap:2rem;
+        gap: 2rem;
 
         .titulo-fiesta {
 
+            border-radius: 10px;
             justify-self: center;
             color: $color-4;
             padding-inline: 2rem;
@@ -315,6 +339,7 @@ main {
             width: 80%;
 
             h2 {
+
                 color: $color-3;
                 justify-self: center;
                 align-self: center;
@@ -328,7 +353,7 @@ main {
             }
         }
 
-        .musica{
+        .musica {
             display: grid;
             justify-self: center;
             background-color: $color-4;
@@ -349,28 +374,29 @@ main {
                 text-align: center;
                 font-size: 1.3rem;
             }
-            button{
-                
-                justify-self: center;
-                    width: 90%;
-                    border: 0;
-                    height: 40px;
-                    border-radius: 20px;
-                    background-color: $color-secundario;
 
-                    a {
-                        justify-content: center;
-                        display: flex;
-                        width: 100%;
-                        font-size: 20px;
-                        color: $color-primario;
-                        font-family: $fuente-principal;
-                        text-decoration: none;
-                    }
+            button {
+
+                justify-self: center;
+                width: 90%;
+                border: 0;
+                height: 40px;
+                border-radius: 20px;
+                background-color: $color-secundario;
+
+                a {
+                    justify-content: center;
+                    display: flex;
+                    width: 100%;
+                    font-size: 20px;
+                    color: $color-primario;
+                    font-family: $fuente-principal;
+                    text-decoration: none;
+                }
             }
         }
 
-        .comida{
+        .comida {
             display: grid;
             justify-self: center;
             background-color: $color-4;
@@ -391,28 +417,29 @@ main {
                 text-align: center;
                 font-size: 1.3rem;
             }
-            button{
-                
-                justify-self: center;
-                    width: 90%;
-                    border: 0;
-                    height: 40px;
-                    border-radius: 20px;
-                    background-color: $color-secundario;
 
-                    a {
-                        justify-content: center;
-                        display: flex;
-                        width: 100%;
-                        font-size: 20px;
-                        color: $color-primario;
-                        font-family: $fuente-principal;
-                        text-decoration: none;
-                    }
+            button {
+
+                justify-self: center;
+                width: 90%;
+                border: 0;
+                height: 40px;
+                border-radius: 20px;
+                background-color: $color-secundario;
+
+                a {
+                    justify-content: center;
+                    display: flex;
+                    width: 100%;
+                    font-size: 20px;
+                    color: $color-primario;
+                    font-family: $fuente-principal;
+                    text-decoration: none;
+                }
             }
         }
 
-        .regalo{
+        .regalo {
             display: grid;
             justify-self: center;
             background-color: $color-4;
@@ -422,7 +449,7 @@ main {
             width: 80%;
 
             h2 {
-                color:$color-3;
+                color: $color-3;
                 justify-self: center;
                 align-self: center;
                 font-size: 2rem;
@@ -436,10 +463,101 @@ main {
         }
     }
 
-    .asistencia {}
+    .asistencia {
+
+        gap: 1rem;
+        display: grid;
+        justify-content: center;
+        margin-bottom: 3rem;
+
+        h2{
+            text-align: center;
+            justify-self: center;
+            color: $color-3;
+            font-family: $fuente-principal;
+           
+        }
+
+        p{
+            text-align: center;
+            font-size: 5vw;
+
+        }
+
+
+    }
 
 }
 
 footer {
-    background-color: rgba(254, 205, 165, 0.492);
+
+    
+    background-color: $color-primario;
+
+    .despedida{
+
+       padding-top: 5rem;
+
+         svg {
+
+            position: absolute;
+            bottom: -360%;
+            left: 30%;
+            max-width: fit-content;
+            height: fit-content;
+            display: grid;
+
+            .ampersand {
+
+                align-self: center;
+                justify-self: center;
+                position: relative;
+                font-family: 'Poppins';
+                font-size: 240px;
+                fill: url(#grad1);
+                filter: url(#shadow);
+                z-index: 1;
+                
+            }
+        }
+
+
+        h1 {
+
+            position: relative; //sin esto, no se coloca delante del svg
+            text-align: center;
+            font-family: $fuente-principal;
+            justify-self: center;
+            align-self: center;
+            font-size: 70px;
+            line-height: 55px;
+            color: $color-3;
+            text-transform: uppercase;
+            font-weight: 400;
+            z-index: 2;
+
+            
+        }
+
+        p{
+            padding-block: 2rem;
+            text-align: center;
+            color: $color-primario;
+            margin-top: 2rem;
+            font-size: 6vw;
+            font-weight: 300;
+            font-family:'Outfit', Sans Serif ;
+            background-color: $color-5;
+        }
+
+        h3{
+            padding-block: 2rem;
+            text-align: center;
+            color: $color-3;
+            justify-self: center;
+            align-self: center;
+            font-size: 2rem;
+        }
+    }
+
 }

@@ -5,9 +5,45 @@
   box-sizing: border-box;
 }
 
+button {
+  justify-self: center;
+  width: 90%;
+  border: 0;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #004cda;
+}
+button a {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  font-size: 20px;
+  color: #aedbff;
+  font-family: "Playfair Display", serif;
+  text-decoration: none;
+}
+
+svg {
+  position: absolute;
+  bottom: 7%;
+  left: 30%;
+  max-width: fit-content;
+  height: fit-content;
+  display: grid;
+}
+svg .ampersand {
+  align-self: center;
+  justify-self: center;
+  position: relative;
+  font-family: "Poppins";
+  font-size: 240px;
+  fill: url(#grad1);
+  filter: url(#shadow);
+}
+
 header .encabezado {
   min-height: 50vh;
-  position: relative;
+  position: static;
   background-size: contain;
   background-image: url("../imagenes/novios.jpg");
   background-repeat: no-repeat;
@@ -73,7 +109,7 @@ main .fecha-y-nombres h2 {
   align-self: top;
   color: #004cda;
   border: 2px solid;
-  margin: 0px 0px 35px;
+  margin: 0px 0px 50px;
   width: fit-content;
   border-image-slice: 1;
   border-image-source: linear-gradient(to right, #aedbff, #004cda, #aedbff);
@@ -113,7 +149,7 @@ main .flores {
   position: relative;
 }
 main .flores img {
-  width: 100%;
+  width: 100vw;
   z-index: 1;
 }
 main .flores p {
@@ -128,16 +164,16 @@ main .flores p {
   /* Centrando horizontalmente */
   transform: translate(-35%, -80%);
   /* Alinear al centro */
-  font-size: 30px;
+  font-size: 7vw;
   line-height: 35px;
   color: #004cda;
   font-family: "Playfair Display", serif;
 }
 main .flores .corazon {
   position: absolute;
-  top: 55%;
+  top: 54%;
   left: 43%;
-  width: 50px;
+  width: 16vw;
   /* Tamaño del corazón */
   height: 100px;
   /* Tamaño del corazón */
@@ -145,8 +181,8 @@ main .flores .corazon {
   /* Color del corazón */
 }
 main .flores .circulo {
-  height: 270px;
-  width: 270px;
+  height: 65vw;
+  width: 65vw;
   background-color: #deeefa;
   position: absolute;
   top: 50%;
@@ -175,6 +211,7 @@ main .ceremonia .cinta .cola-cinta {
   fill: #004cda;
 }
 main .ceremonia .cinta h2 {
+  border-radius: 10px;
   color: #deeefa;
   padding-inline: 2rem;
   font-size: 40px;
@@ -197,6 +234,7 @@ main .ceremonia section h2 {
   color: #092f76;
 }
 main .ceremonia section h3 {
+  text-align: center;
   color: #092f76;
   font-size: 1.4rem;
   justify-self: center;
@@ -226,6 +264,7 @@ main .fiesta {
   gap: 2rem;
 }
 main .fiesta .titulo-fiesta {
+  border-radius: 10px;
   justify-self: center;
   color: #deeefa;
   padding-inline: 2rem;
@@ -351,8 +390,77 @@ main .fiesta .regalo p {
   text-align: center;
   font-size: 1.3rem;
 }
+main .asistencia {
+  gap: 1rem;
+  display: grid;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+main .asistencia h2 {
+  text-align: center;
+  justify-self: center;
+  color: #092f76;
+  font-family: "Playfair Display", serif;
+}
+main .asistencia p {
+  text-align: center;
+  font-size: 5vw;
+}
+
 footer {
-  background-color: rgba(254, 205, 165, 0.492);
+  background-color: #aedbff;
+}
+footer .despedida {
+  padding-top: 5rem;
+}
+footer .despedida svg {
+  position: absolute;
+  bottom: -360%;
+  left: 30%;
+  max-width: fit-content;
+  height: fit-content;
+  display: grid;
+}
+footer .despedida svg .ampersand {
+  align-self: center;
+  justify-self: center;
+  position: relative;
+  font-family: "Poppins";
+  font-size: 240px;
+  fill: url(#grad1);
+  filter: url(#shadow);
+  z-index: 1;
+}
+footer .despedida h1 {
+  position: relative;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  justify-self: center;
+  align-self: center;
+  font-size: 70px;
+  line-height: 55px;
+  color: #092f76;
+  text-transform: uppercase;
+  font-weight: 400;
+  z-index: 2;
+}
+footer .despedida p {
+  padding-block: 2rem;
+  text-align: center;
+  color: #aedbff;
+  margin-top: 2rem;
+  font-size: 6vw;
+  font-weight: 300;
+  font-family: "Outfit", Sans Serif;
+  background-color: rgb(73, 146, 230);
+}
+footer .despedida h3 {
+  padding-block: 2rem;
+  text-align: center;
+  color: #092f76;
+  justify-self: center;
+  align-self: center;
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

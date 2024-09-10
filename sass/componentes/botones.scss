@@ -1,0 +1,19 @@
+button {
+
+    justify-self: center;
+    width: 90%;
+    border: 0;
+    height: 40px;
+    border-radius: 20px;
+    background-color: $color-secundario;
+
+    a {
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        font-size: 20px;
+        color: $color-primario;
+        font-family: $fuente-principal;
+        text-decoration: none;
+    }
+}

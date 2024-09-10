@@ -1,0 +1,19 @@
+svg {
+    position: absolute;
+    bottom: 7%;
+    left: 30%;
+    max-width: fit-content;
+    height: fit-content;
+    display: grid;
+
+    .ampersand {
+
+        align-self: center;
+        justify-self: center;
+        position: relative;
+        font-family: 'Poppins';
+        font-size: 240px;
+        fill: url(#grad1);
+        filter: url(#shadow);
+    }
+}
