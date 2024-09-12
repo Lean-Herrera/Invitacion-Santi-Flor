@@ -4,16 +4,32 @@
     box-sizing: border-box;
 }
 // Colores
-$color-primario:#aedbff;
+// $color-primario:#aedbff;
+$color-primario:#E1F2F9;
 $color-secundario:#004cda;
-$color-3:#092f76;
+$color-3:#002E5A;
 $color-4:#deeefa;
 //$color-5:rgb(99, 163, 237);
 $color-5:#4992e6;
-$color-botones:rgb(209, 248, 226);
+$color-botones:#AEDCEB;
 
 //Fuentes
 
 $fuente-principal:'Playfair Display', serif;
 //$fuente-2:'Open Sans', sans-serif;
 $fuente-2:'Times New Roman';
+
+// Variables para el control de la animación
+$duration: 0.5s;
+$delay: 0.5s;
+$easing: ease-out;
+
+// Variables para el control de la animación
+$duration-2: 0.7s;
+$delay: 0.5s;
+$easing: ease-out;
+
+// Variables para el control de la animación
+$duration-3: 0.9s;
+$delay: 0.5s;
+$easing: ease-out;

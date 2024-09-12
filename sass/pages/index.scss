@@ -1,7 +1,7 @@
 header {
     .encabezado {
 
-        min-height: 50vh;
+        height: 60vh;
         position: static;
         //position: relative;
         //background-image: url("https://www.facebook.com/photo/?fbid=3199221956880925&set=a.258308264305657");
@@ -15,12 +15,13 @@ header {
         font-family: Allura;
 
 
+
         .capa {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 130%;
+            height: auto;
             background-color: rgba(0, 0, 0, 0.507);
             mix-blend-mode: overlay;
 
@@ -28,7 +29,7 @@ header {
         }
 
         .curva {
-            display: none;
+            z-index: 2;
             width: 100vw;
             align-self: end;
         }
@@ -140,14 +141,21 @@ main {
 
         .container {
 
-            display: grid; /* Activar Flexbox */
-            align-items: center; /* Centrar verticalmente */
-            justify-content: center; /* Centrar horizontalmente */
-            position: relative; /* Posición relativa para el SVG y el texto */
-            width: 100%; /* Ancho completo */
-            height: 50vw; /* Altura del viewport */
+            display: grid;
+            /* Activar Flexbox */
+            align-items: center;
+            /* Centrar verticalmente */
+            justify-content: center;
+            /* Centrar horizontalmente */
+            position: relative;
+            /* Posición relativa para el SVG y el texto */
+            width: 100%;
+            /* Ancho completo */
+            height: 50vw;
+            /* Altura del viewport */
             margin: 0;
-            overflow: hidden; /* Evita el desbordamiento */
+            overflow: hidden;
+            /* Evita el desbordamiento */
 
 
             svg {
@@ -159,12 +167,17 @@ main {
                 // height: fit-content;
                 // display: grid;
 
-                position: absolute; /* Posiciona el SVG detrás */
-            width: auto; /* Tamaño relativo al ancho de la ventana */
-            height: auto; /* Mantener la proporción */
-            max-width: 300px; /* Ancho máximo para pantallas más grandes */
-            z-index: 1; /* Detrás del texto */
-             bottom: -32%;
+                position: absolute;
+                /* Posiciona el SVG detrás */
+                width: auto;
+                /* Tamaño relativo al ancho de la ventana */
+                height: auto;
+                /* Mantener la proporción */
+                max-width: 300px;
+                /* Ancho máximo para pantallas más grandes */
+                z-index: 1;
+                /* Detrás del texto */
+                bottom: -32%;
 
                 .ampersand {
 
@@ -177,7 +190,7 @@ main {
                     filter: url(#shadow);
                     z-index: 1;
 
-                   
+
 
                 }
             }
@@ -185,7 +198,7 @@ main {
 
             h1 {
 
-                
+
 
                 position: relative; //sin esto, no se coloca delante del svg
                 text-align: center;
@@ -207,7 +220,7 @@ main {
 
 
 
-        
+
     }
 
 
@@ -252,7 +265,7 @@ main {
             /* Alinear al centro */
             font-size: 7vw;
             line-height: 35px;
-            color: $color-secundario ;
+            color: $color-3 ;
             font-family: $fuente-principal;
 
 
@@ -268,7 +281,7 @@ main {
             /* Tamaño del corazón */
             height: 100px;
             /* Tamaño del corazón */
-            fill: $color-3;
+            fill: $color-botones;
             /* Color del corazón */
         }
 
@@ -293,32 +306,106 @@ main {
         justify-content: center;
         display: grid;
 
+        //Flores emergentes
+
+
+        .flor-con-movimiento {
+            overflow: hidden; // Para que la imagen no se vea al estar fuera del contenedor
+            width: 100vw; // Asegura que el contenedor ocupe todo el ancho
+            position: absolute;
+            left: -25%;
+            display: flex;
+            flex-direction: column;
+            height: 310px;
+
+
+
+            .animated-image {
+                width: 26vw; // Tamaño de la imagen, ajusta según tu necesidad
+                position: absolute;
+                bottom: 30vw;
+
+                transform: translateX(18vw); // Inicialmente, mueve la imagen fuera del viewport desde la derecha
+                opacity: 1; // Imagen oculta al inicio
+                transition: transform $duration $easing, opacity $duration $easing; // Transiciones para suavizar el efecto
+
+                &.show {
+                    transform: translate-X(0); // Cuando se añade la clase 'show', la imagen se muestra
+                    opacity: 1; // La imagen se hace visible
+                }
+            }
+
+            .animated-image-2 {
+                width: 35vw; // Tamaño de la imagen, ajusta según tu necesidad
+                position: absolute;
+                bottom: -3vw;
+
+                transform: translateX(15vw); // Inicialmente, mueve la imagen fuera del viewport desde la derecha
+                opacity: 1; // Imagen oculta al inicio
+                transition: transform $duration-3 $easing, opacity $duration-3 $easing; // Transiciones para suavizar el efecto
+
+                &.show {
+                    transform: translate-X(0); // Cuando se añade la clase 'show', la imagen se muestra
+                    opacity: 1; // La imagen se hace visible
+                    transform: translateZ(1);
+                }
+            }
+
+            .animated-image-1 {
+                width: 22vw; // Tamaño de la imagen, ajusta según tu necesidad
+                position: absolute;
+                bottom: 16vh;
+
+                transform: translateX(23vw); // Inicialmente, mueve la imagen fuera del viewport desde la derecha
+                opacity: 1; // Imagen oculta al inicio
+                transition: transform $duration-2 $easing, opacity $duration-2 $easing; // Transiciones para suavizar el efecto
+
+                &.show {
+                    transform: translate-X(0); // Cuando se añade la clase 'show', la imagen se muestra
+                    opacity: 1; // La imagen se hace visible
+                    transform: translateZ(0);
+                }
+            }
+
+        }
+
+
+
+
+
+
+
+
         .cinta {
             justify-content: center;
             justify-self: center;
             display: flex;
             width: 70vw;
 
-            .cola-cinta {
-                display: none;
+            .div-cola{
+
+                
+.cola-cinta  {
+                position: relative;
                 width: 100%;
-                height: 100%;
-                fill: $color-secundario;
-
-
-
-
+                height: 10%;
+                fill: $color-3;
             }
 
+            }
+            
+
+
             h2 {
-                border-radius: 10px;
+
                 color: $color-4;
                 padding-inline: 2rem;
-                font-size: 40px;
+                font-size: 9vw;
                 font-family: $fuente-principal;
-                background-color: $color-5;
+                background-color: $color-3;
                 align-self: center;
                 text-align: center;
+                width: 70vw;
             }
 
         }
@@ -353,14 +440,14 @@ main {
                     border: 0;
                     height: 40px;
                     border-radius: 20px;
-                    background-color: $color-secundario;
+                    background-color: $color-botones;
 
                     a {
                         justify-content: center;
                         display: flex;
                         width: 100%;
                         font-size: 20px;
-                        color: $color-primario;
+                        color: white;
                         font-family: $fuente-principal;
                         text-decoration: none;
                     }
@@ -453,14 +540,14 @@ main {
                 border: 0;
                 height: 40px;
                 border-radius: 20px;
-                background-color: $color-secundario;
+                background-color: $color-botones;
 
                 a {
                     justify-content: center;
                     display: flex;
                     width: 100%;
                     font-size: 20px;
-                    color: $color-primario;
+                    color: white;
                     font-family: $fuente-principal;
                     text-decoration: none;
                 }
@@ -496,14 +583,14 @@ main {
                 border: 0;
                 height: 40px;
                 border-radius: 20px;
-                background-color: $color-secundario;
+                background-color: $color-botones;
 
                 a {
                     justify-content: center;
                     display: flex;
                     width: 100%;
                     font-size: 20px;
-                    color: $color-primario;
+                    color: white;
                     font-family: $fuente-principal;
                     text-decoration: none;
                 }
@@ -556,6 +643,7 @@ main {
         }
 
 
+
     }
 
 }
@@ -571,14 +659,21 @@ footer {
 
         .container {
 
-            display: grid; /* Activar Flexbox */
-            align-items: center; /* Centrar verticalmente */
-            justify-content: center; /* Centrar horizontalmente */
-            position: relative; /* Posición relativa para el SVG y el texto */
-            width: 100%; /* Ancho completo */
-            height: 50vw; /* Altura del viewport */
+            display: grid;
+            /* Activar Flexbox */
+            align-items: center;
+            /* Centrar verticalmente */
+            justify-content: center;
+            /* Centrar horizontalmente */
+            position: relative;
+            /* Posición relativa para el SVG y el texto */
+            width: 100%;
+            /* Ancho completo */
+            height: 50vw;
+            /* Altura del viewport */
             margin: 0;
-            overflow: hidden; /* Evita el desbordamiento */
+            overflow: hidden;
+            /* Evita el desbordamiento */
 
 
             svg {
@@ -590,12 +685,17 @@ footer {
                 // height: fit-content;
                 // display: grid;
 
-                position: absolute; /* Posiciona el SVG detrás */
-            width: auto; /* Tamaño relativo al ancho de la ventana */
-            height: auto; /* Mantener la proporción */
-            max-width: 300px; /* Ancho máximo para pantallas más grandes */
-            z-index: 1; /* Detrás del texto */
-             bottom: -32%;
+                position: absolute;
+                /* Posiciona el SVG detrás */
+                width: auto;
+                /* Tamaño relativo al ancho de la ventana */
+                height: auto;
+                /* Mantener la proporción */
+                max-width: 300px;
+                /* Ancho máximo para pantallas más grandes */
+                z-index: 1;
+                /* Detrás del texto */
+                bottom: -32%;
 
                 .ampersand {
 
@@ -608,7 +708,7 @@ footer {
                     filter: url(#shadow);
                     z-index: 1;
 
-                   
+
 
                 }
             }
@@ -616,7 +716,7 @@ footer {
 
             h1 {
 
-                
+
 
                 position: relative; //sin esto, no se coloca delante del svg
                 text-align: center;

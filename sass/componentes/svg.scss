@@ -17,3 +17,55 @@ svg {
         filter: url(#shadow);
     }
 }
+
+
+
+.div-cola {
+
+
+    width: 10px;
+
+    svg.cola {
+        position: relative;
+        left: -1px;
+        height: 70px;
+        width: 100px;
+
+
+
+
+        .cola-cinta {
+            position: relative;
+
+            height: 100%;
+            fill: $color-3;
+        }
+
+    }
+
+}
+
+.div-cola {
+
+
+    width: 10px;
+
+    svg.cola-1 {
+        position: relative;
+        left: -1px;
+        height: 70px;
+        width: 100px;
+
+
+
+
+        .cola-cinta {
+            position: relative;
+
+            height: 100%;
+            fill: $color-3;
+        }
+
+    }
+
+}

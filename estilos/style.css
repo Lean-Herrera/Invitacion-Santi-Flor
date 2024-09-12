@@ -11,14 +11,16 @@ button {
   border: 0;
   height: 40px;
   border-radius: 20px;
-  background-color: #004cda;
+  background-color: #AEDCEB;
+  box-shadow: 0px 0px 25px -10px;
 }
 button a {
   justify-content: center;
   display: flex;
   width: 100%;
   font-size: 20px;
-  color: #aedbff;
+  font-weight: 700;
+  color: white;
   font-family: "Playfair Display", serif;
   text-decoration: none;
 }
@@ -41,8 +43,38 @@ svg .ampersand {
   filter: url(#shadow);
 }
 
+.div-cola {
+  width: 10px;
+}
+.div-cola svg.cola {
+  position: relative;
+  left: -1px;
+  height: 70px;
+  width: 100px;
+}
+.div-cola svg.cola .cola-cinta {
+  position: relative;
+  height: 100%;
+  fill: #002E5A;
+}
+
+.div-cola {
+  width: 10px;
+}
+.div-cola svg.cola-1 {
+  position: relative;
+  left: -1px;
+  height: 70px;
+  width: 100px;
+}
+.div-cola svg.cola-1 .cola-cinta {
+  position: relative;
+  height: 100%;
+  fill: #002E5A;
+}
+
 header .encabezado {
-  min-height: 50vh;
+  height: 60vh;
   position: static;
   background-size: contain;
   background-image: url("../imagenes/novios.jpg");
@@ -50,7 +82,7 @@ header .encabezado {
   display: grid;
   justify-content: center;
   background-attachment: fixed;
-  background-color: #aedbff;
+  background-color: #E1F2F9;
   font-family: Allura;
 }
 header .encabezado .capa {
@@ -58,12 +90,12 @@ header .encabezado .capa {
   top: 0;
   left: 0;
   width: 100%;
-  height: 130%;
+  height: auto;
   background-color: rgba(0, 0, 0, 0.507);
   mix-blend-mode: overlay;
 }
 header .encabezado .curva {
-  display: none;
+  z-index: 2;
   width: 100vw;
   align-self: end;
 }
@@ -93,7 +125,7 @@ header .encabezado .wave-container::before {
 }
 
 main {
-  background-color: #aedbff;
+  background-color: #E1F2F9;
   display: grid;
   justify-content: center;
 }
@@ -112,25 +144,37 @@ main .fecha-y-nombres h2 {
   margin: 0px 0px 50px;
   width: fit-content;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to right, #aedbff, #004cda, #aedbff);
+  border-image-source: linear-gradient(to right, #E1F2F9, #004cda, #E1F2F9);
   border-width: 1px;
 }
 main .fecha-y-nombres .container {
-  display: grid; /* Activar Flexbox */
-  align-items: center; /* Centrar verticalmente */
-  justify-content: center; /* Centrar horizontalmente */
-  position: relative; /* Posición relativa para el SVG y el texto */
-  width: 100%; /* Ancho completo */
-  height: 50vw; /* Altura del viewport */
+  display: grid;
+  /* Activar Flexbox */
+  align-items: center;
+  /* Centrar verticalmente */
+  justify-content: center;
+  /* Centrar horizontalmente */
+  position: relative;
+  /* Posición relativa para el SVG y el texto */
+  width: 100%;
+  /* Ancho completo */
+  height: 50vw;
+  /* Altura del viewport */
   margin: 0;
-  overflow: hidden; /* Evita el desbordamiento */
+  overflow: hidden;
+  /* Evita el desbordamiento */
 }
 main .fecha-y-nombres .container svg {
-  position: absolute; /* Posiciona el SVG detrás */
-  width: auto; /* Tamaño relativo al ancho de la ventana */
-  height: auto; /* Mantener la proporción */
-  max-width: 300px; /* Ancho máximo para pantallas más grandes */
-  z-index: 1; /* Detrás del texto */
+  position: absolute;
+  /* Posiciona el SVG detrás */
+  width: auto;
+  /* Tamaño relativo al ancho de la ventana */
+  height: auto;
+  /* Mantener la proporción */
+  max-width: 300px;
+  /* Ancho máximo para pantallas más grandes */
+  z-index: 1;
+  /* Detrás del texto */
   bottom: -32%;
 }
 main .fecha-y-nombres .container svg .ampersand {
@@ -151,7 +195,7 @@ main .fecha-y-nombres .container h1 {
   align-self: center;
   font-size: 70px;
   line-height: 55px;
-  color: #092f76;
+  color: #002E5A;
   text-transform: uppercase;
   font-weight: 400;
   z-index: 2;
@@ -189,7 +233,7 @@ main .flores p {
   /* Alinear al centro */
   font-size: 7vw;
   line-height: 35px;
-  color: #004cda;
+  color: #002E5A;
   font-family: "Playfair Display", serif;
 }
 main .flores .corazon {
@@ -200,7 +244,7 @@ main .flores .corazon {
   /* Tamaño del corazón */
   height: 100px;
   /* Tamaño del corazón */
-  fill: #092f76;
+  fill: #AEDCEB;
   /* Color del corazón */
 }
 main .flores .circulo {
@@ -221,27 +265,74 @@ main .ceremonia {
   justify-content: center;
   display: grid;
 }
+main .ceremonia .flor-con-movimiento {
+  overflow: hidden;
+  width: 100vw;
+  position: absolute;
+  left: -25%;
+  display: flex;
+  flex-direction: column;
+  height: 310px;
+}
+main .ceremonia .flor-con-movimiento .animated-image {
+  width: 26vw;
+  position: absolute;
+  bottom: 30vw;
+  transform: translateX(18vw);
+  opacity: 1;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+main .ceremonia .flor-con-movimiento .animated-image.show {
+  transform: translate-X(0);
+  opacity: 1;
+}
+main .ceremonia .flor-con-movimiento .animated-image-2 {
+  width: 35vw;
+  position: absolute;
+  bottom: -3vw;
+  transform: translateX(15vw);
+  opacity: 1;
+  transition: transform 0.9s ease-out, opacity 0.9s ease-out;
+}
+main .ceremonia .flor-con-movimiento .animated-image-2.show {
+  transform: translate-X(0);
+  opacity: 1;
+  transform: translateZ(1);
+}
+main .ceremonia .flor-con-movimiento .animated-image-1 {
+  width: 22vw;
+  position: absolute;
+  bottom: 16vh;
+  transform: translateX(23vw);
+  opacity: 1;
+  transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+}
+main .ceremonia .flor-con-movimiento .animated-image-1.show {
+  transform: translate-X(0);
+  opacity: 1;
+  transform: translateZ(0);
+}
 main .ceremonia .cinta {
   justify-content: center;
   justify-self: center;
   display: flex;
   width: 70vw;
 }
-main .ceremonia .cinta .cola-cinta {
-  display: none;
+main .ceremonia .cinta .div-cola .cola-cinta {
+  position: relative;
   width: 100%;
-  height: 100%;
-  fill: #004cda;
+  height: 10%;
+  fill: #002E5A;
 }
 main .ceremonia .cinta h2 {
-  border-radius: 10px;
   color: #deeefa;
   padding-inline: 2rem;
-  font-size: 40px;
+  font-size: 9vw;
   font-family: "Playfair Display", serif;
-  background-color: #4992e6;
+  background-color: #002E5A;
   align-self: center;
   text-align: center;
+  width: 70vw;
 }
 main .ceremonia section {
   width: 100%;
@@ -254,11 +345,11 @@ main .ceremonia section h2 {
   font-size: 2rem;
   font-family: "Playfair Display", serif;
   justify-self: center;
-  color: #092f76;
+  color: #002E5A;
 }
 main .ceremonia section h3 {
   text-align: center;
-  color: #092f76;
+  color: #002E5A;
   font-size: 1.4rem;
   justify-self: center;
 }
@@ -270,14 +361,14 @@ main .ceremonia section .mapa button {
   border: 0;
   height: 40px;
   border-radius: 20px;
-  background-color: #004cda;
+  background-color: #AEDCEB;
 }
 main .ceremonia section .mapa button a {
   justify-content: center;
   display: flex;
   width: 100%;
   font-size: 20px;
-  color: #aedbff;
+  color: white;
   font-family: "Playfair Display", serif;
   text-decoration: none;
 }
@@ -309,7 +400,7 @@ main .fiesta .dresscode {
   width: 80%;
 }
 main .fiesta .dresscode h2 {
-  color: #092f76;
+  color: #002E5A;
   justify-self: center;
   align-self: center;
   font-size: 2rem;
@@ -329,7 +420,7 @@ main .fiesta .musica {
   width: 80%;
 }
 main .fiesta .musica h2 {
-  color: #092f76;
+  color: #002E5A;
   justify-self: center;
   align-self: center;
   font-size: 2rem;
@@ -345,14 +436,14 @@ main .fiesta .musica button {
   border: 0;
   height: 40px;
   border-radius: 20px;
-  background-color: #004cda;
+  background-color: #AEDCEB;
 }
 main .fiesta .musica button a {
   justify-content: center;
   display: flex;
   width: 100%;
   font-size: 20px;
-  color: #aedbff;
+  color: white;
   font-family: "Playfair Display", serif;
   text-decoration: none;
 }
@@ -366,7 +457,7 @@ main .fiesta .comida {
   width: 80%;
 }
 main .fiesta .comida h2 {
-  color: #092f76;
+  color: #002E5A;
   justify-self: center;
   align-self: center;
   font-size: 2rem;
@@ -382,14 +473,14 @@ main .fiesta .comida button {
   border: 0;
   height: 40px;
   border-radius: 20px;
-  background-color: #004cda;
+  background-color: #AEDCEB;
 }
 main .fiesta .comida button a {
   justify-content: center;
   display: flex;
   width: 100%;
   font-size: 20px;
-  color: #aedbff;
+  color: white;
   font-family: "Playfair Display", serif;
   text-decoration: none;
 }
@@ -403,7 +494,7 @@ main .fiesta .regalo {
   width: 80%;
 }
 main .fiesta .regalo h2 {
-  color: #092f76;
+  color: #002E5A;
   justify-self: center;
   align-self: center;
   font-size: 2rem;
@@ -422,7 +513,7 @@ main .asistencia {
 main .asistencia h2 {
   text-align: center;
   justify-self: center;
-  color: #092f76;
+  color: #002E5A;
   font-family: "Playfair Display", serif;
 }
 main .asistencia p {
@@ -431,27 +522,39 @@ main .asistencia p {
 }
 
 footer {
-  background-color: #aedbff;
+  background-color: #E1F2F9;
 }
 footer .despedida {
   padding-top: 5rem;
 }
 footer .despedida .container {
-  display: grid; /* Activar Flexbox */
-  align-items: center; /* Centrar verticalmente */
-  justify-content: center; /* Centrar horizontalmente */
-  position: relative; /* Posición relativa para el SVG y el texto */
-  width: 100%; /* Ancho completo */
-  height: 50vw; /* Altura del viewport */
+  display: grid;
+  /* Activar Flexbox */
+  align-items: center;
+  /* Centrar verticalmente */
+  justify-content: center;
+  /* Centrar horizontalmente */
+  position: relative;
+  /* Posición relativa para el SVG y el texto */
+  width: 100%;
+  /* Ancho completo */
+  height: 50vw;
+  /* Altura del viewport */
   margin: 0;
-  overflow: hidden; /* Evita el desbordamiento */
+  overflow: hidden;
+  /* Evita el desbordamiento */
 }
 footer .despedida .container svg {
-  position: absolute; /* Posiciona el SVG detrás */
-  width: auto; /* Tamaño relativo al ancho de la ventana */
-  height: auto; /* Mantener la proporción */
-  max-width: 300px; /* Ancho máximo para pantallas más grandes */
-  z-index: 1; /* Detrás del texto */
+  position: absolute;
+  /* Posiciona el SVG detrás */
+  width: auto;
+  /* Tamaño relativo al ancho de la ventana */
+  height: auto;
+  /* Mantener la proporción */
+  max-width: 300px;
+  /* Ancho máximo para pantallas más grandes */
+  z-index: 1;
+  /* Detrás del texto */
   bottom: -32%;
 }
 footer .despedida .container svg .ampersand {
@@ -472,7 +575,7 @@ footer .despedida .container h1 {
   align-self: center;
   font-size: 70px;
   line-height: 55px;
-  color: #092f76;
+  color: #002E5A;
   text-transform: uppercase;
   font-weight: 400;
   z-index: 2;
@@ -480,7 +583,7 @@ footer .despedida .container h1 {
 footer .despedida p {
   padding-block: 2rem;
   text-align: center;
-  color: #aedbff;
+  color: #E1F2F9;
   margin-top: 2rem;
   font-size: 6vw;
   font-weight: 300;
@@ -490,7 +593,7 @@ footer .despedida p {
 footer .despedida h3 {
   padding-block: 2rem;
   text-align: center;
-  color: #092f76;
+  color: #002E5A;
   justify-self: center;
   align-self: center;
   font-size: 2rem;
