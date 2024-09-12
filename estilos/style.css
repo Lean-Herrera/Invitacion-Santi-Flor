@@ -73,6 +73,48 @@ svg .ampersand {
   fill: #002E5A;
 }
 
+.fiesta .cinta {
+  justify-content: center;
+  justify-self: center;
+  display: flex;
+  width: 70vw;
+}
+.fiesta .cinta .div-cola {
+  width: 10px;
+}
+.fiesta .cinta .div-cola svg.cola {
+  position: relative;
+  left: -1px;
+  height: 70px;
+  width: 100px;
+}
+.fiesta .cinta .div-cola svg.cola .cola-cinta {
+  position: relative;
+  height: 100%;
+  fill: #002E5A;
+}
+
+.fiesta .cinta {
+  justify-content: center;
+  justify-self: center;
+  display: flex;
+  width: 70vw;
+}
+.fiesta .cinta .div-cola {
+  width: 10px;
+}
+.fiesta .cinta .div-cola svg.cola-1 {
+  position: relative;
+  left: -1px;
+  height: 70px;
+  width: 100px;
+}
+.fiesta .cinta .div-cola svg.cola-1 .cola-cinta {
+  position: relative;
+  height: 100%;
+  fill: #002E5A;
+}
+
 header .encabezado {
   height: 60vh;
   position: static;
@@ -325,7 +367,7 @@ main .ceremonia .cinta .div-cola .cola-cinta {
   fill: #002E5A;
 }
 main .ceremonia .cinta h2 {
-  color: #deeefa;
+  color: #fff;
   padding-inline: 2rem;
   font-size: 9vw;
   font-family: "Playfair Display", serif;
@@ -378,26 +420,29 @@ main .fiesta {
   gap: 2rem;
 }
 main .fiesta .titulo-fiesta {
-  border-radius: 10px;
-  justify-self: center;
-  color: #deeefa;
+  color: #fff;
   padding-inline: 2rem;
-  font-size: 40px;
+  font-size: 9vw;
   font-family: "Playfair Display", serif;
-  background-color: #4992e6;
+  background-color: #002E5A;
   align-self: center;
   text-align: center;
-  width: fit-content;
-  margin-bottom: 1rem;
+  width: 70vw;
 }
 main .fiesta .dresscode {
   display: grid;
   justify-self: center;
-  background-color: #deeefa;
+  background-color: #fff;
   padding: 0 40px;
   border-radius: 20px;
   min-height: 300px;
   width: 80%;
+  box-shadow: 0px 0px 15px 0px #002E5A;
+}
+main .fiesta .dresscode .corbata {
+  justify-self: center;
+  margin-block: 1rem;
+  width: 64px;
 }
 main .fiesta .dresscode h2 {
   color: #002E5A;
@@ -406,18 +451,26 @@ main .fiesta .dresscode h2 {
   font-size: 2rem;
 }
 main .fiesta .dresscode p {
+  font-family: "Poppins";
+  color: #818B94;
   justify-self: center;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 main .fiesta .musica {
   display: grid;
   justify-self: center;
-  background-color: #deeefa;
+  background-color: #fff;
   padding: 0 40px;
   border-radius: 20px;
   min-height: 300px;
   width: 80%;
+  box-shadow: 0px 0px 15px 0px #002E5A;
+}
+main .fiesta .musica .notas-musicales {
+  justify-self: center;
+  margin-block: 1rem;
+  width: 60px;
 }
 main .fiesta .musica h2 {
   color: #002E5A;
@@ -426,9 +479,11 @@ main .fiesta .musica h2 {
   font-size: 2rem;
 }
 main .fiesta .musica p {
+  font-family: "Poppins";
+  color: #818B94;
   justify-self: center;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 main .fiesta .musica button {
   justify-self: center;
@@ -450,11 +505,17 @@ main .fiesta .musica button a {
 main .fiesta .comida {
   display: grid;
   justify-self: center;
-  background-color: #deeefa;
+  background-color: #fff;
   padding: 0 40px;
   border-radius: 20px;
   min-height: 400px;
   width: 80%;
+  box-shadow: 0px 0px 15px 0px #002E5A;
+}
+main .fiesta .comida .plato {
+  justify-self: center;
+  margin-block: 1rem;
+  width: 70px;
 }
 main .fiesta .comida h2 {
   color: #002E5A;
@@ -463,9 +524,11 @@ main .fiesta .comida h2 {
   font-size: 2rem;
 }
 main .fiesta .comida p {
+  font-family: "Poppins";
+  color: #818B94;
   justify-self: center;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 main .fiesta .comida button {
   justify-self: center;
@@ -487,11 +550,17 @@ main .fiesta .comida button a {
 main .fiesta .regalo {
   display: grid;
   justify-self: center;
-  background-color: #deeefa;
+  background-color: #fff;
   padding: 0 40px;
   border-radius: 20px;
   min-height: 300px;
   width: 80%;
+  box-shadow: 0px 0px 15px 0px #002E5A;
+}
+main .fiesta .regalo .caja-regalo {
+  justify-self: center;
+  margin-block: 1rem;
+  width: 60px;
 }
 main .fiesta .regalo h2 {
   color: #002E5A;
@@ -500,9 +569,11 @@ main .fiesta .regalo h2 {
   font-size: 2rem;
 }
 main .fiesta .regalo p {
+  font-family: "Poppins";
+  color: #818B94;
   justify-self: center;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 main .asistencia {
   gap: 1rem;
@@ -580,15 +651,22 @@ footer .despedida .container h1 {
   font-weight: 400;
   z-index: 2;
 }
-footer .despedida p {
-  padding-block: 2rem;
+footer .despedida .ultimo-parrafo {
+  display: grid;
+}
+footer .despedida .ultimo-parrafo p {
+  padding: 2rem;
   text-align: center;
   color: #E1F2F9;
   margin-top: 2rem;
   font-size: 6vw;
   font-weight: 300;
   font-family: "Outfit", Sans Serif;
-  background-color: #4992e6;
+  font-family: "Playfair Display", serif;
+  background-color: #002E5A;
+  width: 80vw;
+  justify-self: center;
+  border-radius: 10px;
 }
 footer .despedida h3 {
   padding-block: 2rem;

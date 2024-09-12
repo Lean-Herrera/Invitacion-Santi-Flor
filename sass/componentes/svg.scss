@@ -20,6 +20,7 @@ svg {
 
 
 
+
 .div-cola {
 
 
@@ -68,4 +69,77 @@ svg {
 
     }
 
+}
+
+
+.fiesta{
+
+    .cinta {
+        justify-content: center;
+        justify-self: center;
+        display: flex;
+        width: 70vw;
+
+    .div-cola {
+
+
+        width: 10px;
+    
+        svg.cola {
+            position: relative;
+            left: -1px;
+            height: 70px;
+            width: 100px;
+    
+    
+    
+    
+            .cola-cinta {
+                position: relative;
+    
+                height: 100%;
+                fill: $color-3;
+            }
+    
+        }
+    
+    }
+    
+}
+}
+
+
+.fiesta{
+
+    .cinta {
+
+        justify-content: center;
+        justify-self: center;
+        display: flex;
+        width: 70vw;
+    .div-cola {
+
+
+        width: 10px;
+    
+        svg.cola-1 {
+            position: relative;
+            left: -1px;
+            height: 70px;
+            width: 100px;
+    
+    
+    
+    
+            .cola-cinta {
+                position: relative;
+    
+                height: 100%;
+                fill: $color-3;
+            }
+    
+        }
+    
+    }
+}
 }
