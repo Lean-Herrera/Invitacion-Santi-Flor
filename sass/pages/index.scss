@@ -2,11 +2,11 @@ header {
     .encabezado {
 
         height: 60vh;
-        position: static;
+        position: sticky;
         //position: relative;
         //background-image: url("https://www.facebook.com/photo/?fbid=3199221956880925&set=a.258308264305657");
         background-size: contain;
-        background-image: url("../imagenes/novios.jpg");
+        background-image: url("../imagenes/novios.jpeg");
         background-repeat: no-repeat;
         display: grid;
         justify-content: center;
@@ -32,6 +32,9 @@ header {
             z-index: 2;
             width: 100vw;
             align-self: end;
+            position: absolute;
+            
+
         }
 
 
@@ -79,6 +82,7 @@ main {
 
         margin-block: 2rem;
         display: grid;
+        margin-top: 30px;
 
         span.fecha {
             // justify-content: center;
@@ -312,7 +316,7 @@ main {
                 margin: 10px 0;
             }
 
-            .comillas-cierre{
+            .comillas-cierre {
                 width: 30px;
                 margin: 10px 0;
             }
@@ -613,6 +617,9 @@ main {
                 justify-self: center;
                 text-align: center;
                 font-size: 1rem;
+                b{
+                    color: $color-3;
+                }
             }
         }
 
@@ -759,12 +766,31 @@ main {
 
     .asistencia {
 
-        gap: 1rem;
+        margin-top: 4rem;
         display: grid;
-        justify-content: center;
-        margin-bottom: 3rem;
+        justify-self: center;
+        background-color: $color-4;
+        padding: 2rem 40px;
+        border-radius: 20px;
+        min-height: 400px;
+        width: 80%;
+        box-shadow: 0px 0px 15px 0px #002E5A;
+        position: relative;
+
+        .flores-asistencia {
+
+            position: absolute;
+            width: 50vw;
+            z-index: 4;
+            top: -10%;
+            left: -15%;
+        }
+
+
+
 
         h2 {
+            align-self: end;
             text-align: center;
             justify-self: center;
             color: $color-3;
@@ -773,12 +799,19 @@ main {
         }
 
         p {
+            align-self: center;
             text-align: center;
             font-size: 5vw;
+            font-family: 'Poppins';
+            color: #818B94;
+            justify-self: center;
 
         }
 
+        .link-de-asistencia {
 
+            align-self: end;
+        }
 
     }
 
@@ -793,6 +826,45 @@ footer {
 
         padding-top: 5rem;
 
+
+        .imagen-despedida{
+
+            padding-top: 16%;
+            padding-bottom: 16%;
+            background: url('../../imagenes/manos.jpeg') center center;
+            position: relative;
+margin-bottom: 6rem;
+            height: 650px;
+            background-attachment: fixed;
+            
+
+            &::before{
+                background-image: url('../../imagenes/img_ondas05.svg');
+                position: absolute;
+                content: '';
+                background-repeat: no-repeat;
+                background-position: top center;
+                height: 100%;
+                width: 100%;
+                top: -1px;
+                background-color: rgba(178, 166, 209, 0.4);
+            }
+
+            &::after{
+
+                background-image: url('../../imagenes/img_ondas06.svg');
+                position: absolute;
+                content: '';
+                /* background-size: contain !important; */
+                background-repeat: no-repeat;
+                background-position: bottom center;
+                height: 100%;
+                width: 100%;
+                bottom: -5px;
+                z-index: 99;
+            }
+        }
+
         .container {
 
             display: grid;
@@ -805,69 +877,136 @@ footer {
             /* Posición relativa para el SVG y el texto */
             width: 100%;
             /* Ancho completo */
-            height: 50vw;
+            height: 250px;
             /* Altura del viewport */
             margin: 0;
             overflow: hidden;
             /* Evita el desbordamiento */
 
 
-            svg {
+            // svg {
 
-                // position: absolute;
-                // bottom: -360%;
-                // left: 30%;
-                // max-width: fit-content;
-                // height: fit-content;
-                // display: grid;
+            //     // position: absolute;
+            //     // bottom: -360%;
+            //     // left: 30%;
+            //     // max-width: fit-content;
+            //     // height: fit-content;
+            //     // display: grid;
 
-                position: absolute;
-                /* Posiciona el SVG detrás */
-                width: auto;
-                /* Tamaño relativo al ancho de la ventana */
-                height: auto;
-                /* Mantener la proporción */
-                max-width: 300px;
-                /* Ancho máximo para pantallas más grandes */
-                z-index: 1;
-                /* Detrás del texto */
-                bottom: -32%;
+            //     position: absolute;
+            //     /* Posiciona el SVG detrás */
+            //     width: auto;
+            //     /* Tamaño relativo al ancho de la ventana */
+            //     height: auto;
+            //     /* Mantener la proporción */
+            //     max-width: 300px;
+            //     /* Ancho máximo para pantallas más grandes */
+            //     z-index: 1;
+            //     /* Detrás del texto */
+            //     bottom: -32%;
 
-                .ampersand {
+            //     .ampersand {
 
-                    align-self: center;
-                    justify-self: center;
-                    position: relative;
-                    font-family: 'Poppins';
-                    font-size: 240px;
-                    fill: url(#grad1);
-                    filter: url(#shadow);
-                    z-index: 1;
+            //         align-self: center;
+            //         justify-self: center;
+            //         position: relative;
+            //         font-family: 'Poppins';
+            //         font-size: 240px;
+            //         fill: url(#grad1);
+            //         filter: url(#shadow);
+            //         z-index: 1;
 
 
 
+            //     }
+            // }
+
+
+            // h1 {
+
+
+
+            //     position: relative; //sin esto, no se coloca delante del svg
+            //     text-align: center;
+            //     font-family: $fuente-principal;
+            //     justify-self: center;
+            //     align-self: center;
+            //     font-size: 70px;
+            //     line-height: 55px;
+            //     color: $color-3;
+            //     text-transform: uppercase;
+            //     font-weight: 400;
+            //     z-index: 2;
+
+
+            // }
+
+            span.separador {
+                background-color: #AEDCEB;
+                position: relative;
+                display: inline-block;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                font-size: 40px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+                color: #fff;
+                text-align: center;
+                justify-self: center;
+                margin-bottom: 10px;
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    top: 30px;
+                    width: 80px;
+                    height: 1px;
+                    left: 65px;
+                    background: #AEDCEB;
+                }
+
+                &::after {
+
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    top: 30px;
+                    width: 80px;
+                    height: 1px;
+                    right: 65px;
+                    background: #AEDCEB;
                 }
             }
-
 
             h1 {
 
 
 
-                position: relative; //sin esto, no se coloca delante del svg
+                // position: relative; //sin esto, no se coloca delante del svg
+                // text-align: center;
+                // font-family: $fuente-3;
+                // justify-self: center;
+                // align-self: center;
+                // font-size: 70px;
+                // line-height: 55px;
+                // color: $color-3;
+                // text-transform: uppercase;
+                // font-weight: 400;
+                // z-index: 2;
+                width: 100%;
                 text-align: center;
-                font-family: $fuente-principal;
-                justify-self: center;
-                align-self: center;
-                font-size: 70px;
-                line-height: 55px;
+                font-family: 'Style Script', cursive;
                 color: $color-3;
-                text-transform: uppercase;
-                font-weight: 400;
-                z-index: 2;
-
+                font-size: 70px;
+                line-height: 75px;
+                margin-bottom: 0;
+                font-weight: 500;
 
             }
+
 
         }
 
