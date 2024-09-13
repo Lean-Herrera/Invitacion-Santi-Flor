@@ -694,7 +694,7 @@ footer .despedida .imagen-despedida {
   background-attachment: fixed;
 }
 footer .despedida .imagen-despedida::before {
-  background-image: url("../../imagenes/img_ondas05.svg");
+  background-image: url("../imagenes/img_ondas05.svg");
   position: absolute;
   content: "";
   background-repeat: no-repeat;
