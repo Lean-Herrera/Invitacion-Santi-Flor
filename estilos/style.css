@@ -353,6 +353,8 @@ main .flores .circulo {
 main .ceremonia {
   justify-content: center;
   display: grid;
+  position: relative;
+  margin-bottom: 5rem;
 }
 main .ceremonia .flor-con-movimiento {
   overflow: hidden;
@@ -461,6 +463,17 @@ main .ceremonia section .mapa button a {
   color: white;
   font-family: "Playfair Display", serif;
   text-decoration: none;
+}
+main .ceremonia::after {
+  background-image: url("../../imagenes/img_lineas01.svg");
+  position: absolute;
+  content: "";
+  background-size: contain !important;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  height: 100%;
+  width: 100%;
+  bottom: -15%;
 }
 main .fiesta {
   display: grid;
@@ -695,7 +708,7 @@ footer .despedida .imagen-despedida::after {
   background-image: url("../../imagenes/img_ondas06.svg");
   position: absolute;
   content: "";
-  /* background-size: contain !important; */
+  background-size: contain !important;
   background-repeat: no-repeat;
   background-position: bottom center;
   height: 100%;

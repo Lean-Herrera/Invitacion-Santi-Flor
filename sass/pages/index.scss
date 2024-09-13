@@ -33,7 +33,7 @@ header {
             width: 100vw;
             align-self: end;
             position: absolute;
-            
+
 
         }
 
@@ -233,6 +233,7 @@ main {
             justify-self: center;
             margin-bottom: 10px;
 
+
             &::before {
                 content: '';
                 display: inline-block;
@@ -403,6 +404,8 @@ main {
     .ceremonia {
         justify-content: center;
         display: grid;
+        position: relative;
+        margin-bottom: 5rem;
 
         //Flores emergentes
 
@@ -560,6 +563,17 @@ main {
         }
 
 
+        &::after {
+            background-image: url('../../imagenes/img_lineas01.svg');
+            position: absolute;
+            content: '';
+            background-size: contain !important;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            height: 100%;
+            width: 100%;
+            bottom: -15%;
+        }
 
 
     }
@@ -617,7 +631,8 @@ main {
                 justify-self: center;
                 text-align: center;
                 font-size: 1rem;
-                b{
+
+                b {
                     color: $color-3;
                 }
             }
@@ -827,18 +842,18 @@ footer {
         padding-top: 5rem;
 
 
-        .imagen-despedida{
+        .imagen-despedida {
 
             padding-top: 16%;
             padding-bottom: 16%;
             background: url('../../imagenes/manos.jpeg') center center;
             position: relative;
-margin-bottom: 6rem;
+            margin-bottom: 6rem;
             height: 650px;
             background-attachment: fixed;
-            
 
-            &::before{
+
+            &::before {
                 background-image: url('../../imagenes/img_ondas05.svg');
                 position: absolute;
                 content: '';
@@ -850,12 +865,12 @@ margin-bottom: 6rem;
                 background-color: rgba(178, 166, 209, 0.4);
             }
 
-            &::after{
+            &::after {
 
                 background-image: url('../../imagenes/img_ondas06.svg');
                 position: absolute;
                 content: '';
-                /* background-size: contain !important; */
+             background-size: contain !important; 
                 background-repeat: no-repeat;
                 background-position: bottom center;
                 height: 100%;
