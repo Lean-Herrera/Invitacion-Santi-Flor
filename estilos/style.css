@@ -705,7 +705,7 @@ footer .despedida .imagen-despedida::before {
   background-color: rgba(178, 166, 209, 0.4);
 }
 footer .despedida .imagen-despedida::after {
-  background-image: url("../../imagenes/img_ondas06.svg");
+  background-image: url("../imagenes/img_ondas06.svg");
   position: absolute;
   content: "";
   background-size: contain !important;
