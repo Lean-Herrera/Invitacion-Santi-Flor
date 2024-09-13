@@ -175,38 +175,27 @@ main .fecha-y-nombres {
   margin-block: 2rem;
   display: grid;
 }
-main .fecha-y-nombres h2 {
-  justify-content: center;
-  font-family: "Playfair Display", serif;
-  justify-self: center;
-  padding: 5px 30px 10px;
-  align-self: top;
-  color: #004cda;
-  border: 2px solid;
-  margin: 0px 0px 50px;
+main .fecha-y-nombres span.fecha {
+  display: inline-block;
+  white-space: nowrap;
   width: fit-content;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 22px;
+  color: #002E5A;
+  padding: 10px 30px;
+  margin-bottom: 35px;
+  margin-top: 40px;
+  border: 2px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to right, #E1F2F9, #004cda, #E1F2F9);
-  border-width: 1px;
+  border-width: 2px;
+  border-image-source: linear-gradient(to right, #AEDCEB, #E1F2F9, #AEDCEB);
+  justify-self: center;
+  text-align: center !important;
 }
-main .fecha-y-nombres .container {
-  display: grid;
-  /* Activar Flexbox */
-  align-items: center;
-  /* Centrar verticalmente */
-  justify-content: center;
-  /* Centrar horizontalmente */
-  position: relative;
-  /* Posición relativa para el SVG y el texto */
-  width: 100%;
-  /* Ancho completo */
-  height: 50vw;
-  /* Altura del viewport */
-  margin: 0;
-  overflow: hidden;
-  /* Evita el desbordamiento */
-}
-main .fecha-y-nombres .container svg {
+main .fecha-y-nombres svg {
+  display: none;
   position: absolute;
   /* Posiciona el SVG detrás */
   width: auto;
@@ -219,7 +208,7 @@ main .fecha-y-nombres .container svg {
   /* Detrás del texto */
   bottom: -32%;
 }
-main .fecha-y-nombres .container svg .ampersand {
+main .fecha-y-nombres svg .ampersand {
   align-self: center;
   justify-self: center;
   position: relative;
@@ -229,42 +218,94 @@ main .fecha-y-nombres .container svg .ampersand {
   filter: url(#shadow);
   z-index: 1;
 }
-main .fecha-y-nombres .container h1 {
+main .fecha-y-nombres span.separador {
+  background-color: #AEDCEB;
   position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #fff;
   text-align: center;
-  font-family: "Playfair Display", serif;
   justify-self: center;
-  align-self: center;
-  font-size: 70px;
-  line-height: 55px;
+  margin-bottom: 10px;
+}
+main .fecha-y-nombres span.separador::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  width: 80px;
+  height: 1px;
+  left: 65px;
+  background: #AEDCEB;
+}
+main .fecha-y-nombres span.separador::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  width: 80px;
+  height: 1px;
+  right: 65px;
+  background: #AEDCEB;
+}
+main .fecha-y-nombres h1 {
+  width: 100%;
+  text-align: center;
+  font-family: "Style Script", cursive;
   color: #002E5A;
-  text-transform: uppercase;
-  font-weight: 400;
-  z-index: 2;
+  font-size: 70px;
+  line-height: 75px;
+  margin-bottom: 0;
+  font-weight: 500;
 }
 main .versiculo {
   display: grid;
 }
 main .versiculo p {
+  color: #002E5A;
   font-family: sevillana;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  font-weight: 500;
   margin: 1rem;
   width: 80vw;
   justify-self: center;
+  justify-content: center;
+  text-align: center;
+}
+main .versiculo p .comillas-apertura {
+  width: 30px;
+  margin: 10px 0;
+}
+main .versiculo p .comillas-cierre {
+  width: 30px;
+  margin: 10px 0;
 }
 main .flores {
   justify-self: center;
   display: grid;
   position: relative;
+  margin-block: 2rem;
+}
+main .flores .flores-circulo {
+  position: absolute;
+  width: 45vw;
+  z-index: 4;
+  top: -5%;
+  left: -3%;
 }
 main .flores img {
-  width: 100vw;
+  width: 80vw;
   z-index: 1;
 }
 main .flores p {
   justify-self: center;
   justify-content: center;
-  position: absolute;
   position: absolute;
   /* Posicionar elementos de forma absoluta */
   top: 50%;
@@ -273,25 +314,28 @@ main .flores p {
   /* Centrando horizontalmente */
   transform: translate(-35%, -80%);
   /* Alinear al centro */
-  font-size: 7vw;
+  font-size: 6vw;
   line-height: 35px;
   color: #002E5A;
   font-family: "Playfair Display", serif;
+  z-index: 3;
 }
 main .flores .corazon {
   position: absolute;
   top: 54%;
-  left: 43%;
-  width: 16vw;
+  left: 40%;
+  width: 15vw;
   /* Tamaño del corazón */
   height: 100px;
   /* Tamaño del corazón */
   fill: #AEDCEB;
   /* Color del corazón */
+  z-index: 2;
 }
 main .flores .circulo {
-  height: 65vw;
-  width: 65vw;
+  display: none;
+  height: 68vw;
+  width: 68vw;
   background-color: #deeefa;
   position: absolute;
   top: 50%;
@@ -302,6 +346,7 @@ main .flores .circulo {
   /* Alinear al centro */
   border-radius: 100%;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 2;
 }
 main .ceremonia {
   justify-content: center;
@@ -370,11 +415,12 @@ main .ceremonia .cinta h2 {
   color: #fff;
   padding-inline: 2rem;
   font-size: 9vw;
-  font-family: "Playfair Display", serif;
+  font-family: "Style Script", cursive;
   background-color: #002E5A;
   align-self: center;
   text-align: center;
   width: 70vw;
+  font-weight: 500;
 }
 main .ceremonia section {
   width: 100%;
@@ -423,11 +469,12 @@ main .fiesta .titulo-fiesta {
   color: #fff;
   padding-inline: 2rem;
   font-size: 9vw;
-  font-family: "Playfair Display", serif;
+  font-family: "Style Script", cursive;
   background-color: #002E5A;
   align-self: center;
   text-align: center;
   width: 70vw;
+  font-weight: 500;
 }
 main .fiesta .dresscode {
   display: grid;
