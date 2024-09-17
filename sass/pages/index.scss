@@ -552,6 +552,8 @@ main {
                         color: white;
                         font-family: $fuente-principal;
                         text-decoration: none;
+                        position: relative;
+                        z-index: 3;
                     }
 
                 }
@@ -579,6 +581,7 @@ main {
     }
 
 .galeria{
+
     padding-block: 2rem;
     display: grid;
 
