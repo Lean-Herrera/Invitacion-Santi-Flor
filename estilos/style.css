@@ -475,6 +475,115 @@ main .ceremonia::after {
   width: 100%;
   bottom: -15%;
 }
+main .galeria {
+  padding-block: 2rem;
+  display: grid;
+}
+main .galeria h2 {
+  text-align: center;
+  justify-self: center;
+  font-family: "Style Script", cursive;
+  width: 100%;
+  display: inline-block;
+  color: #002E5A;
+  font-size: 45px;
+  line-height: 60px;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+main .galeria p {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  font-family: "Poppins";
+  color: gray;
+  font-size: 20px;
+  font-weight: 300;
+}
+main .galeria .camara {
+  justify-self: center;
+  margin-block: 1rem;
+  width: 80px;
+}
+main .galeria .carousel-container {
+  width: 100vw;
+  max-width: 300px;
+  position: relative;
+  justify-self: center;
+  overflow: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+main .galeria .carousel {
+  display: flex;
+  transition: transform 5s ease;
+  height: fit-content;
+  animation: slide 30s infinite ease-in-out;
+  gap: 1rem;
+}
+main .galeria .carousel-slide {
+  min-width: 100%;
+  transition: opacity 1s ease;
+  display: grid;
+}
+main .galeria .carousel-slide.active {
+  opacity: 1; /* Mostrar la imagen activa */
+}
+main .galeria .carousel-slide img {
+  width: 80%;
+  display: block;
+  border-radius: 10px;
+  height: 80%;
+  align-self: center;
+  justify-self: center;
+  justify-content: center;
+}
+main .galeria button {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  z-index: 10;
+}
+main .galeria button.prev {
+  left: 10px;
+}
+main .galeria button.next {
+  right: 10px;
+}
+main .galeria button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  16% {
+    transform: translateX(-107%);
+  }
+  33% {
+    transform: translateX(-209%);
+  }
+  49% {
+    transform: translateX(-315%);
+  }
+  65% {
+    transform: translateX(-416%);
+  }
+  84% {
+    transform: translateX(-525%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 main .fiesta {
   display: grid;
   margin-block: 2rem;

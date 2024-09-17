@@ -578,6 +578,129 @@ main {
 
     }
 
+.galeria{
+    padding-block: 2rem;
+    display: grid;
+
+    h2{
+        text-align: center;
+justify-self: center;
+font-family: $fuente-3;
+width: 100%;
+display: inline-block;
+color:$color-3 ;
+font-size: 45px;
+line-height: 60px;
+margin-bottom: 0;
+font-weight: 500;
+    }
+    p{
+        text-align: center;
+        width: 100%;
+        display: inline-block;
+        font-family: 'Poppins';
+        color:gray ;
+        font-size: 20px;
+        font-weight:300;
+    }
+
+    .camara{
+
+        justify-self: center;
+        margin-block: 1rem;
+        width: 80px;
+        
+        
+        
+    }
+
+ .carousel-container {
+        width: 100vw;
+        max-width: 300px;
+        // margin: 50px auto;
+        position: relative;
+        justify-self: center;
+        overflow:auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+        
+    }
+    
+    .carousel {
+        display: flex;
+        transition: transform 5s ease;
+        height: fit-content;
+         animation: slide 30s infinite ease-in-out;
+        gap: 1rem;
+    }
+    
+    .carousel-slide {
+        min-width: 100%;
+        transition: opacity 1s ease;
+        // opacity: 0; /* Ocultar las imágenes por defecto */
+         display: grid;
+    }
+    
+    .carousel-slide.active {
+        opacity: 1; /* Mostrar la imagen activa */
+    }
+    
+    .carousel-slide img {
+        width: 80%;
+        display: block;
+        border-radius: 10px;
+        height: 80%;
+        align-self: center;
+         //animation: slide 30s infinite ease-in-out;
+         justify-self: center;
+         justify-content: center;
+         
+    }
+    
+    button {
+        display: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+        font-size: 18px;
+        z-index: 10;
+    }
+    
+    button.prev {
+        left: 10px;
+    }
+    
+    button.next {
+        right: 10px;
+    }
+    
+    button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    @keyframes slide {
+        0% { transform: translateX(0); }
+        16% { transform: translateX(-107%); }
+         33% { transform: translateX(-209%); }
+         49% { transform: translateX(-315%); }
+         65% { transform: translateX(-416%); }
+        84% { transform: translateX(-525%); }
+        100% { transform: translateX(0); }
+    }
+    
+
+}
+
+
+   
+
     .fiesta {
         display: grid;
         margin-block: 2rem;

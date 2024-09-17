@@ -79,6 +79,59 @@ function isInViewport(element) {
     );
 }
 
+
+let currentIndex = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+const intervalTime = 5000; // Intervalo de tiempo en milisegundos (1.5 segundos)
+
+// Función para mostrar la imagen actual
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+            slide.classList.add('active');
+        }
+    });
+}
+
+// Función para avanzar las imágenes
+function nextSlide() {
+    currentIndex++;
+    if (currentIndex >= slides.length) currentIndex = 0; // Volver al inicio
+    showSlide(currentIndex);
+}
+
+// Función para retroceder las imágenes
+function prevSlide() {
+    currentIndex--;
+    if (currentIndex < 0) currentIndex = slides.length - 1; // Ir al final
+    showSlide(currentIndex);
+}
+
+// Navegación manual
+function moveSlide(n) {
+    currentIndex += n;
+    if (currentIndex >= slides.length) currentIndex = 0; // Volver al inicio
+    if (currentIndex < 0) currentIndex = slides.length - 1; // Ir al final
+    showSlide(currentIndex);
+}
+
+// Mostrar la primera imagen al cargar la página
+showSlide(currentIndex);
+
+// Rotación automática cada 1.5 segundos
+const autoSlideInterval = setInterval(nextSlide, intervalTime);
+
+// Detener el carrusel al hacer hover sobre él
+document.querySelector('.carousel-container').addEventListener('mouseover', () => {
+    clearInterval(autoSlideInterval);
+});
+
+// Reanudar el carrusel al salir del hover
+document.querySelector('.carousel-container').addEventListener('mouseout', () => {
+    setInterval(nextSlide, intervalTime);
+});
+
 // // Añade la clase al cargar la página
 // window.addEventListener('load', showOnLoad);
 
