@@ -508,6 +508,7 @@ main .galeria .camara {
   width: 80px;
 }
 main .galeria .carousel-container {
+  height: 400px;
   width: 100vw;
   max-width: 300px;
   position: relative;
@@ -529,13 +530,14 @@ main .galeria .carousel-slide {
   display: grid;
 }
 main .galeria .carousel-slide.active {
-  opacity: 1; /* Mostrar la imagen activa */
+  opacity: 1;
+  /* Mostrar la imagen activa */
 }
 main .galeria .carousel-slide img {
   width: 80%;
   display: block;
   border-radius: 10px;
-  height: 80%;
+  height: 100%;
   align-self: center;
   justify-self: center;
   justify-content: center;
@@ -750,6 +752,9 @@ main .fiesta .regalo p {
   justify-self: center;
   text-align: center;
   font-size: 1rem;
+}
+main .fiesta .regalo h3 {
+  justify-self: center;
 }
 main .asistencia {
   margin-top: 4rem;
