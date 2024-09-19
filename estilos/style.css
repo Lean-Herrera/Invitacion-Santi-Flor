@@ -358,7 +358,7 @@ main .ceremonia {
 }
 main .ceremonia .flor-con-movimiento {
   overflow: hidden;
-  width: 100vw;
+  width: 70vw;
   position: absolute;
   left: -25%;
   display: flex;
@@ -378,7 +378,7 @@ main .ceremonia .flor-con-movimiento .animated-image.show {
   opacity: 1;
 }
 main .ceremonia .flor-con-movimiento .animated-image-2 {
-  width: 35vw;
+  width: 28vw;
   position: absolute;
   bottom: -3vw;
   transform: translateX(15vw);

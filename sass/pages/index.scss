@@ -412,7 +412,7 @@ main {
 
         .flor-con-movimiento {
             overflow: hidden; // Para que la imagen no se vea al estar fuera del contenedor
-            width: 100vw; // Asegura que el contenedor ocupe todo el ancho
+            width: 70vw; // Asegura que el contenedor ocupe todo el ancho
             position: absolute;
             left: -25%;
             display: flex;
@@ -437,7 +437,7 @@ main {
             }
 
             .animated-image-2 {
-                width: 35vw; // Tamaño de la imagen, ajusta según tu necesidad
+                width: 28vw; // Tamaño de la imagen, ajusta según tu necesidad
                 position: absolute;
                 bottom: -3vw;
 
